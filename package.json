@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/schwarrior/azure-storage-log-manager-ts/issues"
   },
-  "homepage": "https://github.com/schwarrior/azure-storage-log-manager-ts#readme"
+  "homepage": "https://github.com/schwarrior/azure-storage-log-manager-ts#readme",
+  "dependencies": {
+    "@azure/storage-blob": "^10.3.0",
+    "@types/dateformat": "^3.0.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^11.12.1",
+    "dateformat": "^3.0.3",
+    "dotenv": "^7.0.0"
+  }
 }

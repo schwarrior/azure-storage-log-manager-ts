@@ -4,7 +4,7 @@
       "paths": { "*": ["types/*"] },
     "sourceMap": true,
     "target": "es5",
-    "outDir": "CheckAvailabilityOnTimerCharlie",
+    "outDir": "build",
     "resolveJsonModule": true,
     "lib": [
       "dom",
@@ -12,13 +12,11 @@
       "es6"
     ],
     "typeRoots": [
-      "./node_modules/@types",
-      "./custom-types"
+      "./node_modules/@types"
     ]
   },
   "include": [
-      "CheckAvailabilityOnTimerCharlieSrc/**/*",
-      "CheckAvailabilityOnTimerCharlieSrc/**/*.json", "node_module_add/@types/zombie/index.d.ts"
+      "src/**/*"
   ],
   "exclude": [
       "node_modules"
