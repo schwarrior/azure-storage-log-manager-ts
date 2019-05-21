@@ -48,7 +48,7 @@ export class LogManager {
         })();
     }
 
-    constructor(private devMode? : boolean) {
+    constructor() {
         const storageaccount = SettingManager.getSetting("storageaccount")
         const storageaccesskey = SettingManager.getSetting("storageaccesskey")
         const storagecontainername = SettingManager.getSetting("storagecontainername")
@@ -64,13 +64,8 @@ export class LogManager {
             const timeStampFormatted = DateManager.getUtcDateString()
             let logThis = `${timeStampFormatted}\t${message}`
             logThis += "\r\n"
-    
-            if (this.devMode) {
-                console.log("DevMode is on. The following would written to log file if DevMode was off:")
-            } else {
-                const appendBlobUrl = await this.getFileRefAndCreateIfNotExists(logFileName)
-                await appendBlobUrl.appendBlock(this.azureStorageOpAborter, logThis, logThis.length)
-            }
+            const appendBlobUrl = await this.getFileRefAndCreateIfNotExists(logFileName)
+            await appendBlobUrl.appendBlock(this.azureStorageOpAborter, logThis, logThis.length)
             console.log(`${logFileName}: ${logThis.trim()}`)
         } catch (err) {
             console.error(err)
