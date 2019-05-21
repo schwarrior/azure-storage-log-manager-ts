@@ -1,0 +1,19 @@
+{
+  "name": "azure-storage-log-manager-ts",
+  "version": "0.5.0",
+  "description": "Read and write log files in Azure Storage with TypeScript",
+  "main": "build/start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schwarrior/azure-storage-log-manager-ts.git"
+  },
+  "author": "Rob Schwartz<robschwartz@prettyapps.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schwarrior/azure-storage-log-manager-ts/issues"
+  },
+  "homepage": "https://github.com/schwarrior/azure-storage-log-manager-ts#readme"
+}
